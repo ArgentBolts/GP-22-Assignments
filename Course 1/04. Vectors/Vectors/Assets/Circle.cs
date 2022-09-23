@@ -57,20 +57,20 @@ public class Circle : ProcessingLite.GP21
             velocity = Vector2.zero;
         }
 
-        if (circlePosition.x > Width)
+        if (circlePosition.x + diameter / 2 > Width)
         {
             velocity = Vector2.Reflect(velocity, Vector2.right);
         }
 
-        if (circlePosition.y > Height)
+        if (circlePosition.y + diameter / 2  > Height)
         {
             velocity = Vector2.Reflect(velocity, Vector2.down);
         }
-        if (circlePosition.x < 0)
+        if (circlePosition.x - diameter / 2 < 0)
         {
             velocity = Vector2.Reflect(velocity, Vector2.left);
         }
-        if (circlePosition.y < 0)
+        if (circlePosition.y - diameter / 2 < 0)
         {
             velocity = Vector2.Reflect(velocity, Vector2.up);
         }
